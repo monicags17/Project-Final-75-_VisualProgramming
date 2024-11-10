@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{683D2E0C-BC05-47EE-819D-17629A8CE8A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BeautyTrack</RootNamespace>
+    <AssemblyName>BeautyTrack</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.29.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessPage.Designer.cs">
+      <DependentUpon>AccessPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseSkinType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseSkinType.Designer.cs">
+      <DependentUpon>ChooseSkinType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CombinationSkinPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CombinationSkinPage.Designer.cs">
+      <DependentUpon>CombinationSkinPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrySkinPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrySkinPage.Designer.cs">
+      <DependentUpon>DrySkinPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputProdukAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputProdukAdmin.Designer.cs">
+      <DependentUpon>InputProdukAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NormalSkinPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NormalSkinPage.Designer.cs">
+      <DependentUpon>NormalSkinPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OilySkinPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OilySkinPage.Designer.cs">
+      <DependentUpon>OilySkinPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SensitiveSkinPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SensitiveSkinPage.Designer.cs">
+      <DependentUpon>SensitiveSkinPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccessPage.resx">
+      <DependentUpon>AccessPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseSkinType.resx">
+      <DependentUpon>ChooseSkinType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CombinationSkinPage.resx">
+      <DependentUpon>CombinationSkinPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrySkinPage.resx">
+      <DependentUpon>DrySkinPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputProdukAdmin.resx">
+      <DependentUpon>InputProdukAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NormalSkinPage.resx">
+      <DependentUpon>NormalSkinPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OilySkinPage.resx">
+      <DependentUpon>OilySkinPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SensitiveSkinPage.resx">
+      <DependentUpon>SensitiveSkinPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Normal - Facewash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kering - Facewash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Berminyak - Facewash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hada Labo Gokujyun Ultimate Moisturizing Face Wash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kiehls Ultra Facial Cleanser.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fresh Soy Face Cleanser.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\La Mer The Cleansing Foam.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\First aid beauty pure skin face cleanser.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple kind to skin moisturizing facial wash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tatcha the deep cleanse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paula%27s choice pore normalizing cleanser.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clean and clear foaming face wash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2 %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SK-II.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Neutrogena.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wardah Nature Daily.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\La Roche Posay face wash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple kin to skin face wash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hada labo face wash sensitive skin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\normal- moist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Berminyak - moist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kering - moist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sensitif - moist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kombinasi - moist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laneige moist.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hada labo moist.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kiehl%27s ultra facial cream.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nature republic aloe vera.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viva cucumber.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clinique moisture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wardah aloe hydramild.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emina moist in bottle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viva skin food.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laneige water bank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laneige water bank1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laneige water bank2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neutrogena hydro boost.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wardah aloe hydramild1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clinique dramatically different.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cosrx oil free ultra moisturizing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emina ms pimple acne solution.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\normal- sun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sensitif - sun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Berminyak - sun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kering - sun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kombinasi - sun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\la roche posay anthelios sunscreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\innisfree daily mild sunscreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emina sun battle spf 30 pa+++.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinceuticals physical matte uv defense.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nivea sun protect &amp; white oil control.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\azarine hydrasoothe sunscreen gel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laneige watery sun cream.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skin aqua uv moistur gel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wardah uv shield aqua fresh sunscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anessa sunscreen skincare milk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biore uv aqua rich.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skin aqua uv moisture milk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biore uv aqua rich1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skin aqua uv moisture milk1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emina sun battle spf 30 pa+++1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\normal- serum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\normal- mask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kombinasi - serum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kombinasi - mask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kering - serum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kering - mask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Berminyak - serum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Berminyak - mask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sensitif - serum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sensitif - mask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estee lauder advanced night serum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the aubree centella herb serum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mineral botanica brightening serum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skinceuticals blemish age defense.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the ordinary niacinamide.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\somethinc niacinamide.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kiehls daily reviving concentrate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hadalabo gokyujun premium.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\somethinc 5%25 niacinamide + moisture sabi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laneige water bank hydro essence.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avoskin your skin bae hyacross.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wardah hydrating serum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wardah nature daily mask.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\innisfree my real squezze.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fresh rose face mask.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nivea purifying peel off.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\origins clear improvement.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\murad clarifying mask.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garnier  skin active charcoal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the body shop himalayan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tatcha the violet c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\himalaya nourishing skin cream.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laneige water sleeping mask.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tatcha the dewy skin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dr jart cicapair.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avene soothing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emina green tea latte.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\klairs rich moist soothing serum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avoskin your skin bae niacinamide 5%25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viva cosmetics revitalizing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combinationskin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oilyskin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dryskin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\normalskin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sensitiveskin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\input nama produk.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
